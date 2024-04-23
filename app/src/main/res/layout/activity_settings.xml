@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_title"
+        android:text="Settings"
+        android:textColor="#DC7200"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/break1"
+        android:layout_below="@id/settings_title"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/general_category_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/break1"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/general"
+        android:textColor="#ad5f00"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/general_category_title"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/notifications_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable notifications:"
+            android:textColor="#A3A3A3"
+            android:textSize="17sp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"/>
+
+        <Switch
+            android:id="@+id/notifications_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="#ad5f00"
+            android:textColor="#ad5f00"
+            android:layout_gravity="center_vertical"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            app:thumbTint="@drawable/thump"
+            app:trackTint="@drawable/track"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/enable_dynamic_buttons_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable changing button states:"
+            android:textColor="#A3A3A3"
+            android:textSize="17sp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"/>
+
+        <Switch
+            android:id="@+id/enable_dynamic_buttons_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="#ad5f00"
+            android:textColor="#ad5f00"
+            android:layout_gravity="center_vertical"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            app:thumbTint="@drawable/thump"
+            app:trackTint="@drawable/track"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/break2"
+        android:layout_below="@id/layout2"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/generator_category_title"
+        android:layout_below="@+id/break2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Generator Settings"
+        android:textColor="#ad5f00"
+        android:textSize="20sp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generator_category_title"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/enable_statics_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Include static activities:"
+            android:textColor="#A3A3A3"
+            android:textSize="17sp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"/>
+
+        <Switch
+            android:id="@+id/enable_statics_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ad5f00"
+            android:layout_gravity="center_vertical"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            app:thumbTint="@drawable/thump"
+            app:trackTint="@drawable/track"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout3"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/activity_recommendations_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity recommendations:"
+            android:textColor="#A3A3A3"
+            android:textSize="17sp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"/>
+
+        <Switch
+            android:id="@+id/activity_recommendations_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ad5f00"
+            android:layout_gravity="center_vertical"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            app:thumbTint="@drawable/thump"
+            app:trackTint="@drawable/track"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/break3"
+        android:layout_below="@id/layout4"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteWeekly"
+        android:layout_below="@id/break3"
+        android:backgroundTint="#7C4500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Delete Current Weekly"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staticActivitiesButton"
+        android:layout_below="@id/deleteWeekly"
+        android:backgroundTint="#7C4500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Manage Static Activities"/>
+
+    <LinearLayout
+        android:id="@+id/userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonsLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logged in as:"
+            android:textColor="#A3A3A3"
+            android:textSize="17sp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/displayUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#A3A3A3"
+            android:textSize="17sp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonsLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeButton"
+            android:text="Home"
+            android:backgroundTint="#ad5f00"
+            android:layout_marginHorizontal="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveSettings"
+            android:backgroundTint="#ad5f00"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/saveSettings"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logOutButton"
+            android:backgroundTint="#ad5f00"
+            android:layout_marginHorizontal="10dp"
+            android:text="Log out"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

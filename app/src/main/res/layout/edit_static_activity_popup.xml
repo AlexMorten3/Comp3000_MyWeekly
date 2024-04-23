@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/EditActivityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:hint="Activity Name" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/dayChoices"
+        android:layout_below="@+id/EditActivityName"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monday:"/>
+
+                <CheckBox
+                    android:id="@+id/editMondayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday:" />
+
+                <CheckBox
+                    android:id="@+id/editTuesdayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday:" />
+
+                <CheckBox
+                    android:id="@+id/editWednesdayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thursday:" />
+
+                <CheckBox
+                    android:id="@+id/editThursdayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday:" />
+
+                <CheckBox
+                    android:id="@+id/editFridayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday:" />
+
+                <CheckBox
+                    android:id="@+id/editSaturdayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunday:" />
+
+                <CheckBox
+                    android:id="@+id/editSundayCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--           DIVISION           -->
+
+
+        <LinearLayout
+            android:id="@+id/dayLayout"
+            android:layout_below="@+id/ActivityName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/monEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/monEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/tueEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/tueEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/wedEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/wedEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/thuEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/thuEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/friEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/friEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/satEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/satEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:hint="Start Time"
+                    android:id="@+id/sunEditStartTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+                <EditText
+                    android:hint="End Time"
+                    android:id="@+id/sunEditEndTime"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dayChoices"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Ensure time format conforms to: HH:MM"/>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/static_title"
+        android:text="Static Activities"
+        android:textColor="#DC7200"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addStaticButton"
+        android:text="Add Static Activity"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/static_title"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#ad5f00"
+        android:layout_marginHorizontal="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/staticScrollView"
+        android:layout_below="@+id/addStaticButton"
+        android:layout_above="@id/buttonsLayout"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/staticActivitiesLayoutViewer"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonsLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButton"
+            android:text="Back"
+            android:backgroundTint="#ad5f00"
+            android:layout_marginHorizontal="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteStaticActivities"
+            android:text="Delete All Static Activities"
+            android:backgroundTint="#ad5f00"
+            android:layout_marginHorizontal="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

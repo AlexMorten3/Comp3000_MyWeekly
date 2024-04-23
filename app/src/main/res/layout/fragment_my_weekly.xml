@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MyWeeklyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--Monday-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day1"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Monday"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/monView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#5c5a59"
+                    android:layout_below="@+id/day1"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <!--Tuesday-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day2"
+                android:layout_below="@+id/monView"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Tuesday"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/tueView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#5c5a59"
+                    android:layout_below="@+id/day2"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <!--Wednesday-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day3"
+                android:layout_below="@+id/wedView"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Wednesday"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/wedView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#5c5a59"
+                    android:layout_below="@+id/day2"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <!--Thursday-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day4"
+                android:layout_below="@+id/wedView"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Thursday"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/thuView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#5c5a59"
+                    android:layout_below="@+id/day2"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <!--Friday-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day5"
+                android:layout_below="@+id/thuView"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Friday"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/friView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#5c5a59"
+                    android:layout_below="@+id/day2"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <!--Saturday-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day6"
+                android:layout_below="@+id/friView"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Saturday"/>
+
+
+            <!--Sunday-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/satView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/day2"
+                    android:background="#5c5a59"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day7"
+                android:layout_below="@+id/satView"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="#FA6E23"
+                android:textSize="16dp"
+                android:text="Sunday"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#5c5a59">
+
+                <LinearLayout
+                    android:id="@+id/sunView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#5c5a59"
+                    android:layout_below="@+id/day2"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
