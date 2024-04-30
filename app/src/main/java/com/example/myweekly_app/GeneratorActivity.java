@@ -449,8 +449,8 @@ public class GeneratorActivity extends AppCompatActivity {
         EditText editTextStartTime = editView.findViewById(R.id.EditStartTime);
         EditText editTextEndTime = editView.findViewById(R.id.EditEndTime);
 
-        String formattedStart = (TimeConverters.convertDatabaseTypeToEntryTimeString(activity.getStart()));
-        String formattedEnd = (TimeConverters.convertDatabaseTypeToEntryTimeString(activity.getEnd()));
+        String formattedStart = (TimeConverters.convertFormattedToEntryTimeString(activity.getStart()));
+        String formattedEnd = (TimeConverters.convertFormattedToEntryTimeString(activity.getEnd()));
 
         editTextActivityName.setText(activity.getName());
         editTextStartTime.setText(formattedStart);
@@ -468,8 +468,8 @@ public class GeneratorActivity extends AppCompatActivity {
                     String endTimeHHMM = TimeConverters.convertTimeToHHMM(updatedEndTime);
 
                     activity.setName(updatedName);
-                    activity.setStart(formattedStart);
-                    activity.setEnd(formattedEnd);
+                    activity.setStart(startTimeHHMM);
+                    activity.setEnd(endTimeHHMM);
 
                     activityDatabaseHelper.updateActivity(activity);
 

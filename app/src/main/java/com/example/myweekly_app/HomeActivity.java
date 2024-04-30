@@ -91,6 +91,12 @@ public class HomeActivity extends AppCompatActivity {
             generateNextWeeklyButton.setVisibility(View.INVISIBLE);
         }
 
+        if (isActive) {
+            editButton.setVisibility(View.VISIBLE);
+        } else {
+            editButton.setVisibility(View.INVISIBLE);
+        }
+
         loadFragment(isActive);
     }
 

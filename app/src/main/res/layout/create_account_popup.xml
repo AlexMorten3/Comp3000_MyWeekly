@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/signupEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:hint="Email address"/>
+
+    <EditText
+        android:id="@+id/signupPassword1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signupEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:inputType="textPassword"
+        android:timePickerMode="spinner"
+        android:hint="Password"/>
+
+    <EditText
+        android:id="@+id/signupPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signupPassword1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:inputType="textPassword"
+        android:hint="Confirm password"/>
+
+</RelativeLayout>

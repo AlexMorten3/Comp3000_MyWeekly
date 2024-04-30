@@ -22,6 +22,7 @@ import com.example.myweekly_app.R;
 import com.example.myweekly_app.model.ActivityInfo;
 import com.example.myweekly_app.helper.ActivityDatabaseHelper;
 import com.example.myweekly_app.helper.StaticActivityDatabaseHelper;
+import com.example.myweekly_app.status.SharedPreferenceManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -152,33 +153,41 @@ public class MyWeeklyFragment extends Fragment {
         if (colorStateList != null) {
             int currentColor = colorStateList.getDefaultColor();
             int nextColor;
+            if (SharedPreferenceManager.isColorChanger()) {
+                if (currentColor == Color.parseColor("#e33232")) {
+                    nextColor = Color.parseColor("#dec431");
+                } else if (currentColor == Color.parseColor("#dec431")) {
+                    nextColor = Color.parseColor("#41d94b");
+                } else if (currentColor == Color.parseColor("#41d94b")) {
+                    nextColor = Color.parseColor("#e33232");
+                } else {
+                    nextColor = Color.parseColor("#e33232");
+                }
 
-            if (currentColor == Color.parseColor("#e33232")) {
-                nextColor = Color.parseColor("#dec431");
-            } else if (currentColor == Color.parseColor("#dec431")) {
-                nextColor = Color.parseColor("#41d94b");
-            } else if (currentColor == Color.parseColor("#41d94b")) {
-                nextColor = Color.parseColor("#e33232");
+                button.setBackgroundTintList(ColorStateList.valueOf(nextColor));
             } else {
-                nextColor = Color.parseColor("#e33232");
-            }
+                if (currentColor == Color.parseColor("#e6993c")) {
+                    nextColor = Color.parseColor("#e6993c");
+                } else if (currentColor == Color.parseColor("#e6993c")) {
+                    nextColor = Color.parseColor("#e6993c");
+                } else if (currentColor == Color.parseColor("#e6993c")) {
+                    nextColor = Color.parseColor("#e6993c");
+                } else {
+                    nextColor = Color.parseColor("#e6993c");
+                }
 
-            button.setBackgroundTintList(ColorStateList.valueOf(nextColor));
+                button.setBackgroundTintList(ColorStateList.valueOf(nextColor));
+            }
         }
     }
 
 
     private int getNextState(int currentState) {
-        return (currentState % 3) + 1;
-    }
-
-    private void toggleButtonColorBehavior() {
-        isButtonColorStatic = !isButtonColorStatic;
-        saveButtonColorStaticSetting(isButtonColorStatic);
-        setButtonColorBehavior(isButtonColorStatic);
-
-        String message = isButtonColorStatic ? "Button colors are now static." : "Button colors are dynamic.";
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show();
+        if (SharedPreferenceManager.isColorChanger()) {
+            return (currentState % 3) + 1;
+        } else {
+            return (currentState);
+        }
     }
 
     private LinearLayout getDayLayout(String day) {
@@ -203,15 +212,28 @@ public class MyWeeklyFragment extends Fragment {
     }
 
     private int getColorForState(int state) {
-        switch (state) {
-            case 1:
-                return Color.parseColor("#e33232");
-            case 2:
-                return Color.parseColor("#dec431");
-            case 3:
-                return Color.parseColor("#41d94b");
-            default:
-                return Color.parseColor("#e33232");
+        if (SharedPreferenceManager.isColorChanger()) {
+            switch (state) {
+                case 1:
+                    return Color.parseColor("#e33232");
+                case 2:
+                    return Color.parseColor("#dec431");
+                case 3:
+                    return Color.parseColor("#41d94b");
+                default:
+                    return Color.parseColor("#e33232");
+            }
+        } else {
+            switch (state) {
+                case 1:
+                    return Color.parseColor("#e6993c");
+                case 2:
+                    return Color.parseColor("#e6993c");
+                case 3:
+                    return Color.parseColor("#e6993c");
+                default:
+                    return Color.parseColor("#e6993c");
+            }
         }
     }
 
